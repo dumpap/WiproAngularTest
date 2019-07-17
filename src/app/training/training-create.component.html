@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Training Detail Form</h1>
+    <form #trainingForm="ngForm" (ngSubmit)="createTraining(trainingForm)" class="form form-register">
+      <div class="register-item">
+        <label for="trainingName">Training Name</label>
+        <input type="text" class="form-control" id="tgName" name="trainingName" [(ngModel)] = "trainingModel.TrainingName" required>
+      </div>
+
+      <div class="form-field">
+        <label for="startDate">Start Date</label>
+        <input type="date" class="form-control" id="stDate" name="startDate" [(ngModel)] = "trainingModel.StartDate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="endDate">End Date</label>
+        <input type="date" class="form-control" id="edDate" name="endDate" [(ngModel)] = "trainingModel.EndDate" required>
+      </div>
+
+      <button type="submit" class="btn btn-success" value="Submit">Submit</button>
+
+    </form>
+</div>
